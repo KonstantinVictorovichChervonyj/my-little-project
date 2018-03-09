@@ -1,0 +1,907 @@
+$font-open-sans: "Open Sans - Semi Bold"
+$font-freestyle-script: "Freestyle Script"
+$banner-image: "../img/banner.png"
+$font-url-open-sans: "../fonts/OpenSans-Semibold.ttf"
+@font-face
+  font-family: $font-open-sans
+  src: url($font-url-open-sans)
+body
+  margin: 0
+
+.wrap
+  max-width: 1960px
+  margin: 0 auto
+
+header
+  height: 100px
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.15)
+  background-color: #ffff
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  width: 100%
+  z-index: 1
+  top: 0
+  .fa-bars
+    display: none
+  .logo
+    margin: 0 100px
+  ul
+    width: 250px
+    padding: 0
+    display: flex
+    justify-content: end
+    align-items: center
+    list-style: none
+    li
+      margin: 0 10px
+      a
+        color: #555555
+        font-family: $font-open-sans
+        font-size: 14px
+        text-decoration: none
+      a:hover
+        color: #5363db
+        border-bottom: solid 1px #5363db
+
+#banner
+    height: 600px
+    background-image: url($banner-image)
+    margin-top: 100px
+    .banner-background
+      height: 600px
+      background-color: rgba(83, 99, 219, 0.8)
+      display: flex
+      justify-content: center
+      align-items: center
+      .banner-background-left
+        display: flex
+        width: 30%
+        justify-content: flex-end
+        margin-right: 75px
+        form
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: space-evenly
+          width: 300px
+          height: 391px
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.15)
+          border-radius: 20px
+          background-color: #ffffff
+          h2
+            color: #5363db
+            font-family: $font-open-sans
+            font-size: 26px
+            margin: 15px 110px 15px 0
+          input
+            padding-left: 3px
+            width: 230px
+            height: 50px
+            border-radius: 8px
+            background-color: #f2f2f2
+            border: none
+            outline: none
+          input[placeholder]
+            color: #888888
+            font-family: $font-open-sans
+            font-size: 14px
+          input::-moz-placeholder
+            color: #888888
+            font-family: $font-open-sans
+            font-size: 14px
+          input:-moz-placeholder
+            color: #888888
+            font-family: $font-open-sans
+            font-size: 14px
+          input:-ms-input-placeholder
+            color: #888888
+            font-family: $font-open-sans
+            font-size: 14px
+          select
+            width: 230px
+            height: 50px
+            border-radius: 8px
+            background-color: #f2f2f2
+            border: none
+            outline: none
+            color: #888888
+            font-family: $font-open-sans
+            font-size: 14px
+          button
+            cursor: pointer
+            outline: none
+            width: 170px
+            height: 50px
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15)
+            border-radius: 8px
+            background-color: #5b6ceb
+            border: none
+            color: #ffffff
+            font-family: $font-open-sans
+            font-size: 16px
+            margin: 15px 0 15px 60px
+          button:active
+            opacity: 0.8
+          .error
+            background-color: rgba(255, 0, 0, 0.2)
+          .success
+            background-color: rgba(30, 255, 0, 0.2)
+
+      .banner-background-right
+        display: flex
+        flex-direction: column
+        width: 30%
+      h1
+        color: #ffffff
+        font-family: $font-open-sans
+        font-size: 48px
+        text-transform: uppercase
+        margin: 5px 0
+      p
+        color: #ffffff
+        font-family: $font-freestyle-script
+        font-size: 40px
+        width: 55%
+        margin: 5px 0
+#program
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  h2
+    color: #5b6ceb
+    font-family: $font-open-sans
+    font-size: 30px
+    text-transform: uppercase
+    text-align: center
+    margin: 80px 0 0 0
+  p
+    color: #777777
+    font-family:  $font-freestyle-script
+    font-size: 41px
+    text-align: center
+    margin: 10px 0
+  .program-items
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    margin: 70px 0
+    width: 80%
+    .program-item
+      width: 570px
+      height: 300px
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1)
+      border-radius: 8px
+      background-color: #ffffff
+      display: flex
+      margin: 20px
+      .program-item-text
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 35px
+        h3
+          color: #777777
+          font-family: $font-open-sans
+          font-size: 20px
+          text-transform: uppercase
+          margin: 10px 0
+        p
+          color: #555555
+          font-family: $font-open-sans
+          font-size: 14px
+          text-align: left
+        span
+          color: #999999
+          font-family: $font-open-sans
+          font-size: 14px
+#galery-image
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  .galery-image-item-one
+    position: relative
+    background-image: url(../img/galery-image-one.png)
+    width: 479px
+    height: 350px
+    .galery-image-item-background
+      background-color: rgba(83, 99, 219, 0)
+      width: 479px
+      height: 350px
+      transition: background-color 1s
+    .fa
+      position: absolute
+      top: 45%
+      right: 45%
+      color: #5b6ceb
+      font-size: 24px
+      width: 57px
+      height: 57px
+      box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      border-radius: 50%
+      display: none
+      justify-content: center
+      align-items: center
+      cursor: pointer
+  .galery-image-item-two
+    position: relative
+    background-image: url(../img/galery-image-two.png)
+    width: 479px
+    height: 350px
+    .galery-image-item-background
+      background-color: rgba(83, 99, 219, 0)
+      width: 479px
+      height: 350px
+      transition: background-color 1s
+    .fa
+      position: absolute
+      top: 45%
+      right: 45%
+      color: #5b6ceb
+      font-size: 24px
+      width: 57px
+      height: 57px
+      box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      border-radius: 50%
+      display: none
+      justify-content: center
+      align-items: center
+      cursor: pointer
+  .galery-image-item-three
+    position: relative
+    background-image: url(../img/galery-image-three.png)
+    width: 479px
+    height: 350px
+    .galery-image-item-background
+      background-color: rgba(83, 99, 219, 0)
+      width: 479px
+      height: 350px
+      transition: background-color 1s
+    .fa
+      position: absolute
+      top: 45%
+      right: 45%
+      color: #5b6ceb
+      font-size: 24px
+      width: 57px
+      height: 57px
+      box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      border-radius: 50%
+      display: none
+      justify-content: center
+      align-items: center
+      cursor: pointer
+  .galery-image-item-four
+    position: relative
+    background-image: url(../img/galery-image-four.png)
+    width: 479px
+    height: 350px
+    .galery-image-item-background
+      background-color: rgba(83, 99, 219, 0)
+      width: 479px
+      height: 350px
+      transition: background-color 1s
+    .fa
+      position: absolute
+      top: 45%
+      right: 45%
+      color: #5b6ceb
+      font-size: 24px
+      width: 57px
+      height: 57px
+      box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      border-radius: 50%
+      display: none
+      justify-content: center
+      align-items: center
+      cursor: pointer
+  .galery-image-item-five
+    position: relative
+    background-image: url(../img/galery-image-five.png)
+    width: 479px
+    height: 350px
+    .galery-image-item-background
+      background-color: rgba(83, 99, 219, 0)
+      width: 479px
+      height: 350px
+      transition: background-color 1s
+    .fa
+      position: absolute
+      top: 45%
+      right: 45%
+      color: #5b6ceb
+      font-size: 24px
+      width: 57px
+      height: 57px
+      box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      border-radius: 50%
+      display: none
+      justify-content: center
+      align-items: center
+      cursor: pointer
+  .galery-image-item-six
+    position: relative
+    background-image: url(../img/galery-image-six.png)
+    width: 479px
+    height: 350px
+    .galery-image-item-background
+      background-color: rgba(83, 99, 219, 0)
+      width: 479px
+      height: 350px
+      transition: background-color 1s
+    .fa
+      position: absolute
+      top: 45%
+      right: 45%
+      color: #5b6ceb
+      font-size: 24px
+      width: 57px
+      height: 57px
+      box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      border-radius: 50%
+      display: none
+      justify-content: center
+      align-items: center
+      cursor: pointer
+  .galery-image-item-seven
+    position: relative
+    background-image: url(../img/galery-image-seven.png)
+    width: 479px
+    height: 350px
+    .galery-image-item-background
+      background-color: rgba(83, 99, 219, 0)
+      width: 479px
+      height: 350px
+      transition: background-color 1s
+    .fa
+      position: absolute
+      top: 45%
+      right: 45%
+      color: #5b6ceb
+      font-size: 24px
+      width: 57px
+      height: 57px
+      box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      border-radius: 50%
+      display: none
+      justify-content: center
+      align-items: center
+      cursor: pointer
+  .galery-image-item-eight
+    position: relative
+    background-image: url(../img/galery-image-eight.png)
+    width: 479px
+    height: 350px
+    .galery-image-item-background
+      background-color: rgba(83, 99, 219, 0)
+      width: 479px
+      height: 350px
+      transition: background-color 1s
+    .fa
+      position: absolute
+      top: 45%
+      right: 45%
+      color: #5b6ceb
+      font-size: 24px
+      width: 57px
+      height: 57px
+      box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      border-radius: 50%
+      display: none
+      justify-content: center
+      align-items: center
+      cursor: pointer
+  .galery-image-item-background:hover
+    background-color: rgba(83, 99, 219, 0.8)
+    .fa
+      display: flex
+#about-us
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  margin: 100px 0
+  .about-text
+    width: 35%
+    h2
+      color: #5b6ceb
+      font-family: $font-open-sans
+      font-size: 30px
+      text-transform: uppercase
+    p
+      color: #555555
+      font-family: $font-open-sans
+      font-size: 14px
+      font-weight: 400
+      line-height: 22px
+      width: 70%
+  .about-slider
+    display: flex
+    justify-content: center
+    align-items: center
+    .fa
+      color: #5b6ceb
+      font-size: 24px
+      width: 57px
+      height: 57px
+      box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1)
+      background-color: #ffffff
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
+    .fa-angle-left
+      margin-right: -20px
+    .fa-angle-right
+      margin-left: -20px
+#icons-bar
+  height: 800px
+  background-image: url(../img/icons-bar-banner.png)
+  background-repeat: no-repeat
+  margin: 0 auto
+  width: 98%
+  .icons-bar-background
+    height: 800px
+    background-color: rgba(83, 99, 219, 0.8)
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    .icons-bar-item
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+      flex-direction: column
+      width: 18%
+      margin: 0 25px
+      h3
+        color: #ffffff
+        font-family: $font-open-sans
+        font-size: 18px
+        text-transform: uppercase
+      p
+        color: #ffffff
+        font-family: $font-open-sans
+        font-size: 16px
+        width: 80%
+#price
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-image: url(../img/background.png)
+  .price-items
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    .price-item
+      width: 370px
+      height: 494px
+      box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.1)
+      border-radius: 10px
+      background-color: #ffffff
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      margin: 66px 30px 10px 30px
+      span
+        color: #555555
+        font-family: $font-open-sans
+        font-size: 18px
+        text-transform: uppercase
+      hr
+        width: 100px
+        height: 1px
+        border: 1px solid #d7d7d7
+        background-color: #d7d7d7
+      button
+        outline: none
+        width: 170px
+        height: 50px
+        border-radius: 20px
+        background-color: #5b6ceb
+        border: none
+        color: #ffffff
+        font-family: $font-open-sans
+        font-size: 18px
+        margin: 30px 0
+        cursor: pointer
+      button:active
+        opacity: 0.8
+      .value
+        width: 370px
+        height: 150px
+        background-color: #5b6ceb
+        border-radius: 10px 10px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        p
+          color: #ffffff
+          font-family: $font-open-sans
+          font-size: 32px
+          text-transform: uppercase
+          margin: 0 5px 0 0
+        span
+          color: #ffffff
+          font-family: $font-open-sans
+          font-size: 18px
+          text-transform: uppercase
+          margin: 35px 0 0 5px
+        strong
+          color: #ffffff
+          font-family: $font-open-sans
+          font-size: 67px
+          text-transform: uppercase
+  .price-note
+    width: 1170px
+    height: 250px
+    box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.1)
+    border-radius: 8px
+    margin: 90px 0
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    .price-note-text
+      width: 60%
+      p
+        color: #555555
+        font-family: $font-open-sans
+        font-size: 14px
+        font-style: italic
+        .fa
+          color: #5b6ceb
+          font-size: 17px
+          margin: 0 5px
+      span
+        font-family: $font-open-sans
+        color: #777777
+        font-size: 14px
+      h4
+        color: #5b6ceb
+        font-family: $font-open-sans
+        font-size: 16px
+        margin: 5px 0
+    ul
+      list-style: none
+      padding: 0
+      position: relative
+      right: -100px
+      li
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        border: 2px solid #d7d7d7
+        margin: 10px 0
+        transition: background-color 1s
+      li:hover
+        border: 2px solid #5b6ceb
+        background-color: #5b6ceb
+.footer-menu
+  height: 450px
+  background-color: #5b6ceb
+  display: flex
+  align-items: flex-start
+  justify-content: space-evenly
+  div
+    width: 25%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin-top: 110px
+    img
+      margin: 0 5px 0 0
+  div:last-child
+    margin-top: 185px
+    width: 15%
+  div:nth-child(2)
+    width: 13%
+  h4
+    color: #ffffff
+    font-family: $font-open-sans
+    font-size: 18px
+    text-transform: uppercase
+  p
+    color: #ffffff
+    font-family: $font-open-sans
+    font-size: 14px
+    display: flex
+    align-items: center
+  ul
+    list-style: none
+    padding: 0
+    display: flex
+    align-items: center
+    li
+      margin: 0 10px
+footer
+  height: 100px
+  background-color: #5363d8
+  display: flex
+  justify-content: center
+  align-items: center
+  p
+    color: #b7bffc
+    font-family: $font-open-sans
+    font-size: 16px
+@media screen and (max-width: 1290px)
+  #price
+    .price-note
+      display: none!important
+@media screen and (max-width: 1235px)
+  .banner-background-left
+    width: 50%!important
+  .banner-background-right
+    display: flex
+    flex-direction: column
+    width: 50%!important
+    h1
+      color: #ffffff
+      font-family: $font-open-sans
+      font-size: 48px
+      text-transform: uppercase
+      margin: 5px 0
+    p
+      color: #ffffff
+      font-family: $font-freestyle-script
+      font-size: 40px
+      width: 55%
+      margin: 5px 0
+@media screen and (max-width: 989px)
+  #about-us
+    .about-text
+      width: 100%
+      text-align: center
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+@media screen and (max-width: 970px)
+  .logo
+    margin: 0 50px!important
+  header
+    display: flex
+    justify-content: center
+    ul
+      width: 100%
+      padding: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      list-style: none
+@media screen and (max-width: 869px)
+  .footer-menu
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    div
+      margin-top: 50px
+      width: 80%!important
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    .footer-menu div:nth-child(2)
+      margin-top: 50px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 80%!important
+    div:last-child
+      margin-top: 50px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 80%!important
+@media screen and (max-width: 819px)
+  #icons-bar
+    display: none!important
+  .banner-background-left
+    width: 50%!important
+    margin-right: 0!important
+    justify-content: center!important
+  .banner-background-right
+    display: flex
+    flex-direction: column
+    width: 50%!important
+    h1
+      color: #ffffff
+      font-family: $font-open-sans
+      font-size: 48px
+      text-transform: uppercase
+      margin: 5px 0
+    p
+      color: #ffffff
+      font-family: $font-freestyle-script
+      font-size: 40px
+      width: 55%
+      margin: 5px 0
+@media screen and (max-width: 780px)
+  .logo
+    margin: 0!important
+  header
+    display: flex
+    justify-content: space-around
+    ul
+      display: none
+    .fa-bars
+      display: block
+      color: #5b6ceb
+      font-size: 50px
+      cursor: pointer
+  #program
+    h2
+      color: #5b6ceb
+      font-family: $font-open-sans
+      font-size: 30px
+      text-transform: uppercase
+      text-align: center
+      margin: 80px 0 0 0
+    p
+      color: #777777
+      font-family:  $font-freestyle-script
+      font-size: 41px
+      text-align: center
+      margin: 10px 0
+    .program-items
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-wrap: wrap
+      margin: 70px 0
+      width: 100%
+      .program-item
+        width: 570px
+        height: 300px
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1)
+        border-radius: 8px
+        background-color: #ffffff
+        display: flex
+        margin: 20px
+@media screen and (max-width: 780px)
+  .banner-background
+    display: flex!important
+    flex-direction: column-reverse!important
+    justify-content: space-around!important
+  .banner-background-left
+    width: 100%!important
+  .banner-background-right
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 80%!important
+    h1
+      font-size: 30px!important
+      margin: 0!important
+      text-align: center
+      width: 100%!important
+    p
+      text-align: center!important
+      font-size: 20px!important
+@media screen and (max-width: 655px)
+  .about-slider
+    img
+      width: 330px
+      height: 165px
+    .fa
+      width: 30px!important
+      height: 30px!important
+      position: relative
+      z-index: 1
+      top: 0 !important
+      right: 0 !important
+@media screen and (max-width: 571px)
+  #program
+    h2
+      color: #5b6ceb
+      font-family: $font-open-sans
+      font-size: 20px
+      text-transform: uppercase
+      text-align: center
+      margin: 5px 0 0 0
+    p
+      color: #777777
+      font-family:  $font-freestyle-script
+      font-size: 31px
+      text-align: center
+      margin: 2px 0
+    .program-items
+      margin: 50px 0
+      .program-item
+        width: 320px
+        height: 100px
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1)
+        border-radius: 8px
+        background-color: #ffffff
+        display: flex
+        margin: 20px
+        img
+          width: 100px
+          height: 100px
+        .program-item-text
+          display: flex
+          flex-direction: column
+          justify-content: center
+          padding: 5px
+          h3
+            color: #777777
+            font-size: 10px
+            text-transform: uppercase
+            margin: 5px 0
+          p
+            color: #555555
+            font-size: 9px
+            text-align: left
+          span
+            color: #999999
+            font-size: 8px
+@media screen and (max-width: 505px)
+  .fa
+    top: 41%!important
+    right: 41%!important
+  .galery-image-item-one
+    width: 330px!important
+    height: 250px!important
+    margin-top: 20px
+  .galery-image-item-two
+    width: 330px!important
+    height: 250px!important
+    margin-top: 20px
+  .galery-image-item-three
+    width: 330px!important
+    height: 250px!important
+    margin-top: 20px
+  .galery-image-item-four
+    width: 330px!important
+    height: 250px!important
+    margin-top: 20px
+  .galery-image-item-five
+    width: 330px!important
+    height: 250px!important
+    margin-top: 20px
+  .galery-image-item-six
+    width: 330px!important
+    height: 250px!important
+    margin-top: 20px
+  .galery-image-item-seven
+    width: 330px!important
+    height: 250px!important
+    margin-top: 20px
+  .galery-image-item-eight
+    width: 330px!important
+    height: 250px!important
+    margin-top: 20px
+  .galery-image-item-background
+    background-color: rgba(83, 99, 219, 0)
+    width: 330px!important
+    height: 250px!important
+  .price-item
+    margin: 66px 0px 10px 0px!important
+@media screen and (max-width: 372px)
+  .price-item
+    width: 340px!important
+  .value
+    width: 340px!important
+
